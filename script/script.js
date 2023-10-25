@@ -99,6 +99,7 @@ closeButton.addEventListener('click', (event) => {
     strokeColors.forEach(strokeColor => {
         strokeColor.classList.remove('second__stroke_white');
     })
+    customCheckbox.checked = false
     clearCode()
     
 })
