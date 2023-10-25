@@ -49,6 +49,11 @@ body {
     grid-row-end: 5;
 }
 
+.button__second_active {
+    background: #000000;
+    color: #FFFFFF;
+}
+
 .button__confirm {
     width: 284px;
     background: #000000;
@@ -95,7 +100,7 @@ body {
     height: 40px;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;

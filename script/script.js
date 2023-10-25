@@ -17,6 +17,8 @@ const goodBlock = document.querySelector('.js-good-block');
 const fillColors = document.querySelectorAll('.second__fill');
 const strokeColors = document.querySelectorAll('.second__stroke');
 
+let regular = /[0-9]{3}[0]{7}/i;
+let regularRight = /[0-9]{10}/i;
 let code = '';
 
 const fillCode = (digit) => {
@@ -24,19 +26,21 @@ const fillCode = (digit) => {
         code += digit;
         phoneNumbersRecords[code.length - 1].innerText = digit;
         inputPhone.value = code
-        
-        if(inputPhone.value === '0000000000') {
+
+        if(regular.test(inputPhone.value)) {
             secondNumbers.classList.add('second__numbers_red')
             secondCheckboxBox.classList.add('second__checkbox_active')
             error.classList.add('second__error_active')
+            phoneClearButton.classList.add('button__second_active')
         } else {
             secondNumbers.classList.remove('second__numbers_red')
             secondCheckboxBox.classList.remove('second__checkbox_active')
             error.classList.remove('second__error_active')
+            phoneClearButton.classList.remove('button__second_active')
         }
 
         customCheckbox.addEventListener('change', () => {
-            if((labelCheckbox.className = customCheckbox.checked) && code.length === 10 && inputPhone.value !== '0000000000') {
+            if((labelCheckbox.className = customCheckbox.checked) && code.length === 10 && regularRight.test(inputPhone.value)) {
                 confirmButton.removeAttribute('disabled') 
             } else {
                 confirmButton.setAttribute('disabled', '');
