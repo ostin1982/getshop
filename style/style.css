@@ -119,8 +119,8 @@ body {
 .main_active {
     opacity: 1;
     overflow: visible;
-    width: 100vw;
-    height: 100vh; 
+    width: calc(100vw - 0px);
+    height: calc(100vh - 0px);
 }
 
 .main__wrapper {
@@ -184,8 +184,8 @@ body {
 .second_active {
     opacity: 1;
     overflow: visible;
-    width: 100vw;
-    height: 100vh; 
+    width: calc(100vw - 0px);
+    height: calc(100vh - 0px);
 }
 
 .second__wrapper {
