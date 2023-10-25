@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer="defer"></script>
+    <title>GetShop.TV</title>
+</head>
+<body>
+    <section class="main main_active">
+        <div class="main__wrapper">
+            <h1 class="main__heading">ИСПОЛНИТЕ МЕЧТУ ВАШЕГО МАЛЫША!<br>ПОДАРИТЕ ЕМУ СОБАКУ!</h1>
+            <div class="main__qr">
+                <img src="img/qr-code.webp" alt="" class="main__img">
+            </div>
+            <p class="main__text">Сканируйте QR-код или нажмите ОК</p>
+            <button class="button button__main js-button-proceed">ОК</button>
+        </div>
+    </section>
+    <section class="second">
+        <div class="second__wrapper">
+            <div class="second__block second__block_active js-block-main">
+                <h2 class="second__heading">Введите ваш номер мобильного телефона</h2>
+                <div class="second__numbers">
+                    <p class="second__number">+7</p>
+                    <p class="second__number">(</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number">)</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number">-</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number">-</p>
+                    <p class="second__number js-number-record">_</p>
+                    <p class="second__number js-number-record">_</p>
+                </div>
+                <p class="second__text">и с Вами свяжется наш менеждер для дальнейшей консультации</p>
+                <div class="second__dial">
+                    <button class="button button__second js-button-digit" data-num="1">1</button>
+                    <button class="button button__second js-button-digit" data-num="2">2</button>
+                    <button class="button button__second js-button-digit" data-num="3">3</button>
+                    <button class="button button__second js-button-digit" data-num="4">4</button>
+                    <button class="button button__second js-button-digit" data-num="5">5</button>
+                    <button class="button button__second js-button-digit" data-num="6">6</button>
+                    <button class="button button__second js-button-digit" data-num="7">7</button>
+                    <button class="button button__second js-button-digit" data-num="8">8</button>
+                    <button class="button button__second js-button-digit" data-num="9">9</button>
+                    <button class="button button__second button__second_erase js-button-erase">Стереть</button>
+                    <button class="button button__second js-button-digit" data-num="0">0</button>
+                </div>
+                <form action="" class="second__form">
+                    <input type="text" class="input js-input" name="tel" value="">
+                    <div class="second__checkbox">
+                        <input type="checkbox" class="custom-checkbox" id="approval" name="approval" value="yes">
+                        <label for="approval" class="js-checkbox-label">Согласие на обработку персональных данных</label>
+                    </div>
+                    <div class="second__error">
+                        <p class="second__red">Неверно введён номер</p>
+                    </div>
+                    <button class="button button__confirm js-button-confirm" disabled>Подтвердить номер</button>
+                </form>
+            </div>
+            <div class="second__good js-good-block">
+                <h2 class="second__title">ЗАЯВКА<br>ПРИНЯТА</h2>
+                <p class="second__subtitle">Держите телефон под рукой.<br>Скоро с Вами свяжется наш менеджер.</p>
+            </div>
+        </div>
+        <div class="second__close js-button-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="88" height="52" viewBox="0 0 88 52" fill="none">
+                <g clip-path="url(#clip0_190_12829)">
+                    <rect class="second__fill" width="88" height="52" transform="matrix(1 0 0 -1 0 52)"/>
+                    <line class="second__stroke" x1="34.3448" y1="14.9407" x2="54.6264" y2="35.2223" stroke-width="3"/>
+                    <line class="second__stroke" x1="33.6576" y1="35.2223" x2="53.9392" y2="14.9407" stroke-width="3"/>
+                </g>
+                <rect class="second__stroke" x="1" y="1" width="86" height="50" stroke-width="2"/>
+                <defs>
+                    <clipPath id="clip0_190_12829">
+                        <rect class="second__fill" width="88" height="52"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="second__info">
+            <p class="second__additionally">Сканируйте QR-код ДЛЯ ПОЛУЧЕНИЯ ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИИ</p>
+            <div class="second__qr">
+                <img src="img/qr-code.webp" alt="" class="second__img">
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>

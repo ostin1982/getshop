@@ -1,0 +1,396 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #86D3F4;
+    color: #000000;
+}
+
+.button {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button__main {
+    background: #000000;
+    color: #86D3F4;
+    width: 156px;
+    padding: 16px;
+    border: none;
+}
+
+.button__second {
+    background: #86D3F4;
+    border: 2px solid #000000;
+    padding: 12px 0;
+    color: #000000;
+}
+
+.button__second:hover {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.button__second_erase {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.button__confirm {
+    width: 284px;
+    background: #000000;
+    border: 2px solid #000000;
+    color: #FFFFFF;
+    padding: 16px 19px;
+    cursor: pointer;
+}
+
+.button__confirm:disabled {
+    color: #4E4E4E;
+    background: #86D3F4;
+    border: 2px solid #4E4E4E;
+    cursor: default;
+}
+
+.input {
+    display: none;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    color: #565656;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #000000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    margin-right: 20px;
+}
+
+.custom-checkbox:checked+label::before {
+    background: url("../img/check.svg") no-repeat center center;
+}
+
+.main {
+    position: relative;
+    width: 0;
+    height: 0; 
+    opacity: 0;
+    overflow: hidden;
+    background: url('../img/first.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.main_active {
+    opacity: 1;
+    overflow: visible;
+    width: 100vw;
+    height: 100vh; 
+}
+
+.main__wrapper {
+    position: absolute;
+    top: calc(50% - 194px);
+    right: 0;
+    padding: 30px 10px;
+    background: #86D3F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 251px;
+}
+
+.main__heading {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.main__text {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 126px;
+    margin: 0;
+}
+
+.main__qr {
+    min-width: 110px;
+    max-width: 110px;
+    width: 100%;
+    height: 110px;
+    position: relative;
+}
+
+.main__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.second {
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+    height: 0; 
+    background: url('../img/second.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.second_active {
+    opacity: 1;
+    overflow: visible;
+    width: 100vw;
+    height: 100vh; 
+}
+
+.second__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 80px);
+    width: 332px;
+    background: #86D3F4;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second__block {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.second__block_active {
+    display: flex;
+}
+
+.second__heading {
+    color: #000;
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.second__numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.second__number {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.second__numbers_red .second__number {
+    color: #EA0000;
+}
+
+.second__text {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.second__dial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    width: 284px;
+}
+
+.second__checkbox {
+    display: block;
+    width: 284px;
+}
+
+.second__checkbox_active {
+    display: none;
+}
+
+.second__error {
+    display: none;
+}
+
+.second__error_active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 284px;
+    padding: 16px 0;
+}
+
+.second__red {
+    color: #EA0000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.second__good {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.second__good_active {
+    display: flex;
+}
+
+.second__title {
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.second__subtitle {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.second__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 88px;
+    height: 52px;
+    cursor: pointer;
+}
+
+.second__fill {
+    fill: #FFFFFF;
+}
+
+.second__fill_black {
+    fill: #000000;
+}
+
+.second__stroke {
+    stroke: #000000;
+}
+
+.second__stroke_white {
+    stroke: #FFFFFF;
+}
+
+.second__info {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 314px;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.second__additionally {
+    color: #FFF;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.second__qr {
+    min-width: 110px;
+    max-width: 110px;
+    width: 100%;
+    height: 110px;
+    position: relative;
+}
+
+.second__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.second__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
